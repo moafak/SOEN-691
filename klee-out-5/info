@@ -1,0 +1,4 @@
+klee --search=dfs --external-calls=none -exit-on-error-type=Abort --only-output-states-covering-new --entry-point=LZ4F_compressFrame_usingCDict lz4frame.bc
+PID: 41636
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2019-04-08 02:22:53

@@ -1,0 +1,12 @@
+Error: memory error: out of bound pointer
+File: /home/klee/lz4/lib/lz4.c
+Line: 2163
+assembly.ll line: 72655
+Stack: 
+	#000072655 in LZ4_uncompress (source=1, dest=45228896, outputSize=45228912) at /home/klee/lz4/lib/lz4.c:2163
+Info: 
+	address: 65221112
+	next: object at 65221120 of size 8
+		MO49[8] allocated at LZ4_uncompress():  %dest.addr = alloca i8*, align 8
+	prev: object at 65221112 of size 4
+		MO50[4] allocated at LZ4_uncompress():  %outputSize.addr = alloca i32, align 4

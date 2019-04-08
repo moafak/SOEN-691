@@ -1,0 +1,11 @@
+Error: memory error: out of bound pointer
+File: /tmp/klee_src/runtime/FreeStanding/memcpy.c
+Line: 17
+assembly.ll line: 72883
+Stack: 
+	#000072883 in memcpy (=12370169552430956545, =30688384, =16) at /tmp/klee_src/runtime/FreeStanding/memcpy.c:17
+	#100072618 in LZ4_wildCopy32 (dstPtr=1, srcPtr=30688384, dstEnd=30688400) at /home/klee/lz4/lib/lz4.c:346
+Info: 
+	address: 12370169552430956545
+	next: object at 27780096 of size 1416
+		MO11[1416] allocated at LZ4_wildCopy32():  %dstPtr.addr = alloca i8*, align 8

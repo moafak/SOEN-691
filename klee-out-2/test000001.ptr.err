@@ -1,0 +1,10 @@
+Error: memory error: out of bound pointer
+File: /home/klee/lz4/lib/lz4frame.c
+Line: 140
+assembly.ll line: 5269
+Stack: 
+	#000005269 in LZ4F_readLE32 (src=1) at /home/klee/lz4/lib/lz4frame.c:140
+Info: 
+	address: 12370169552430956545
+	next: object at 33789616 of size 168
+		MO9[168] allocated at global:LZ4F_errorStrings

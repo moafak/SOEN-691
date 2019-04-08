@@ -1,0 +1,10 @@
+Error: memory error: out of bound pointer
+File: /home/klee/lz4/lib/lz4frame.c
+Line: 173
+assembly.ll line: 2131
+Stack: 
+	#000002131 in LZ4F_writeLE64 (dst=1, value64=28437600) at /home/klee/lz4/lib/lz4frame.c:173
+Info: 
+	address: 12370169552430956545
+	next: object at 28437600 of size 288
+		MO0[288] allocated at LZ4F_writeLE64():  %dst.addr = alloca i8*, align 8
